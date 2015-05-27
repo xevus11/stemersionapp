@@ -13,7 +13,8 @@
     <!-- This FrameLayout insets its children based on system windows using
          android:fitsSystemWindows. -->
     <FrameLayout android:layout_width="match_parent" android:layout_height="match_parent"
-        android:fitsSystemWindows="true">
+        android:fitsSystemWindows="true"
+        android:layout_gravity="left|bottom">
 
         <LinearLayout android:id="@+id/fullscreen_content_controls" style="?metaButtonBarStyle"
             android:layout_width="match_parent" android:layout_height="wrap_content"
@@ -21,11 +22,17 @@
             android:background="@color/black_overlay" android:orientation="horizontal"
             tools:ignore="UselessParent">
 
-            <Button android:id="@+id/dummy_button" style="?metaButtonBarButtonStyle"
-                android:layout_width="0dp" android:layout_height="wrap_content"
-                android:layout_weight="1" android:text="@string/dummy_button" />
-
         </LinearLayout>
+
+        <GridView
+            android:layout_width="546dp"
+            android:layout_height="339dp"
+            android:id="@+id/gridView"
+            android:layout_gravity="center"
+            android:numColumns="5"
+            android:choiceMode="singleChoice"
+            android:clickable="true" />
+
     </FrameLayout>
 
 </FrameLayout>

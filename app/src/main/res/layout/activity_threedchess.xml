@@ -9,6 +9,23 @@
         android:layout_height="match_parent" android:keepScreenOn="true" android:textColor="#33b5e5"
         android:textStyle="bold" android:textSize="50sp" android:gravity="center"
         android:text="@string/dummy_content" />
+    <!-- the following is a custom set of values in order to draw the actual chess board -->
+    <shape
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:shape="oval"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <solid
+            android:color="#666666"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <size
+            android:width="120dp"
+            android:height="120dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </shape>
 
     <!-- This FrameLayout insets its children based on system windows using
          android:fitsSystemWindows. -->
@@ -24,14 +41,40 @@
 
         </LinearLayout>
 
-        <GridView
-            android:layout_width="546dp"
-            android:layout_height="339dp"
-            android:id="@+id/gridView"
-            android:layout_gravity="center"
-            android:numColumns="5"
-            android:choiceMode="singleChoice"
-            android:clickable="true" />
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center">
+
+            <GridView
+                android:layout_width="546dp"
+                android:layout_height="339dp"
+                android:id="@+id/gridView"
+                android:layout_gravity="center"
+                android:numColumns="5"
+                android:choiceMode="singleChoice"
+                android:clickable="true" />
+
+            <Chronometer
+                android:layout_width="199dp"
+                android:layout_height="120dp"
+                android:id="@+id/chronometer"
+                android:inputType="none"
+                android:numeric="integer"
+                android:singleLine="true"
+                android:textStyle="normal"
+                android:typeface="serif"
+                android:visibility="visible"
+                android:width="80dp"
+                android:layout_gravity="right|top" />
+
+            <Button
+                android:layout_width="200dp"
+                android:layout_height="100dp"
+                android:text="End Turn"
+                android:id="@+id/button"
+                android:layout_gravity="left|top" />
+        </FrameLayout>
 
     </FrameLayout>
 

@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Implementation-Title: Pulse Chess
+Implementation-Version: 1.5
+Implementation-Vendor-Id: com.fluxchess
+Built-By: bamboo
+Build-Jdk: 1.7.0_55
+Created-By: Apache Maven 3.0.5
+Main-Class: com.fluxchess.pulse.Pulse
+Archiver-Version: Plexus Archiver
+
